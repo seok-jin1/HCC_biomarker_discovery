@@ -124,8 +124,8 @@ def load_gse149614(raw_dir: Optional[Path] = None) -> ad.AnnData:
 
     raw_dir = Path(raw_dir)
 
-    count_gz   = raw_dir / "GSE149614_HCC.scRNAseq.S71271.count.txt.gz"
-    meta_gz    = raw_dir / "GSE149614_HCC.scRNAseq.S71271.metadata.txt.gz"
+    count_gz   = raw_dir / "GSE149614_HCC.scRNAseq.S71915.count.txt.gz"
+    meta_gz    = raw_dir / "GSE149614_HCC.metadata.updated.txt.gz"
 
     print(f"[load_gse149614] reading count matrix …")
     counts = pd.read_csv(count_gz, sep="\t", index_col=0, compression="gzip")
@@ -171,10 +171,10 @@ def load_gse140228(raw_dir: Optional[Path] = None) -> ad.AnnData:
 
     raw_dir = Path(raw_dir)
 
-    matrix_gz   = raw_dir / "GSE140228_Droplet_raw_data_matrix.mtx.gz"
-    barcodes_gz = raw_dir / "GSE140228_Droplet_raw_data_barcodes.tsv.gz"
-    genes_gz    = raw_dir / "GSE140228_Droplet_raw_data_genes.tsv.gz"
-    cellinfo_gz = raw_dir / "GSE140228_Droplet_cell_info.txt.gz"
+    matrix_gz   = raw_dir / "GSE140228_UMI_counts_Droplet.mtx.gz"
+    barcodes_gz = raw_dir / "GSE140228_UMI_counts_Droplet_barcodes.tsv.gz"
+    genes_gz    = raw_dir / "GSE140228_UMI_counts_Droplet_genes.tsv.gz"
+    cellinfo_gz = raw_dir / "GSE140228_UMI_counts_Droplet_cellinfo.tsv.gz"
 
     # Decompress to temp files if needed
     matrix_f   = decompress_gz(matrix_gz)
@@ -253,7 +253,7 @@ def load_gse151530(raw_dir: Optional[Path] = None) -> ad.AnnData:
     matrix_gz   = raw_dir / "GSE151530_matrix.mtx.gz"
     barcodes_gz = raw_dir / "GSE151530_barcodes.tsv.gz"
     genes_gz    = raw_dir / "GSE151530_genes.tsv.gz"
-    cellinfo_gz = raw_dir / "GSE151530_CellInfo.txt.gz"
+    cellinfo_gz = raw_dir / "GSE151530_Info.txt.gz"
 
     matrix_f   = decompress_gz(matrix_gz)
     barcodes_f = decompress_gz(barcodes_gz)

@@ -22,8 +22,8 @@ DATA_ROOT = Path("/mnt/e/no_exp_paper/data")
 RAW_DIR        = DATA_ROOT / "raw"
 PROCESSED_DIR  = DATA_ROOT / "processed"
 EXTERNAL_DIR   = DATA_ROOT / "external"
-ICB_DIR        = DATA_ROOT / "icb"
-CHECKPOINT_DIR = DATA_ROOT / "checkpoints"
+ICB_DIR        = EXTERNAL_DIR / "ICB_cohorts"
+CHECKPOINT_DIR = DATA_ROOT / "model_checkpoints"
 
 # Code and results live in the WSL home directory
 PROJECT_ROOT = Path("/home/laugh/no_exp_paper")
@@ -42,8 +42,8 @@ DATASETS = {
         "platform": "10x Chromium",
         "sorted": False,
         "urls": [
-            "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE149nnn/GSE149614/suppl/GSE149614_HCC.scRNAseq.S71271.count.txt.gz",
-            "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE149nnn/GSE149614/suppl/GSE149614_HCC.scRNAseq.S71271.metadata.txt.gz",
+            "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE149nnn/GSE149614/suppl/GSE149614_HCC.scRNAseq.S71915.count.txt.gz",
+            "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE149nnn/GSE149614/suppl/GSE149614_HCC.metadata.updated.txt.gz",
         ],
     },
     "GSE140228": {
@@ -51,10 +51,10 @@ DATASETS = {
         "platform": "10x Chromium (Droplet) + Smart-seq2",
         "sorted": True,   # CD45-sorted
         "urls": [
-            "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140228/suppl/GSE140228_Droplet_raw_data_matrix.mtx.gz",
-            "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140228/suppl/GSE140228_Droplet_raw_data_barcodes.tsv.gz",
-            "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140228/suppl/GSE140228_Droplet_raw_data_genes.tsv.gz",
-            "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140228/suppl/GSE140228_Droplet_cell_info.txt.gz",
+            "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140228/suppl/GSE140228_UMI_counts_Droplet.mtx.gz",
+            "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140228/suppl/GSE140228_UMI_counts_Droplet_barcodes.tsv.gz",
+            "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140228/suppl/GSE140228_UMI_counts_Droplet_genes.tsv.gz",
+            "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140228/suppl/GSE140228_UMI_counts_Droplet_cellinfo.tsv.gz",
         ],
     },
     "GSE156625": {
@@ -73,7 +73,7 @@ DATASETS = {
             "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE151nnn/GSE151530/suppl/GSE151530_matrix.mtx.gz",
             "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE151nnn/GSE151530/suppl/GSE151530_barcodes.tsv.gz",
             "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE151nnn/GSE151530/suppl/GSE151530_genes.tsv.gz",
-            "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE151nnn/GSE151530/suppl/GSE151530_CellInfo.txt.gz",
+            "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE151nnn/GSE151530/suppl/GSE151530_Info.txt.gz",
         ],
     },
 }
@@ -91,16 +91,16 @@ VALIDATION = {
         "raw_dir":       EXTERNAL_DIR / "GSE14520",
     },
     "GSE285963": {
-        "expression": EXTERNAL_DIR / "GSE285963" / "GSE285963_readcount.gct.gz",
-        "raw_dir":    EXTERNAL_DIR / "GSE285963",
+        "expression": ICB_DIR / "GSE285963" / "GSE285963_CU24_n84_readcount.gct.gz",
+        "raw_dir":    ICB_DIR / "GSE285963",
     },
     "GSE206325": {
-        "raw_dir": EXTERNAL_DIR / "GSE206325",
+        "raw_dir": ICB_DIR / "GSE206325",
     },
     "GSE140901": {
-        "raw_tar":    EXTERNAL_DIR / "GSE140901" / "GSE140901_RAW.tar",
-        "processed":  EXTERNAL_DIR / "GSE140901" / "GSE140901_processed_data.txt.gz",
-        "raw_dir":    EXTERNAL_DIR / "GSE140901",
+        "raw_tar":    ICB_DIR / "GSE140901" / "GSE140901_RAW.tar",
+        "processed":  ICB_DIR / "GSE140901" / "GSE140901_processed_data.txt.gz",
+        "raw_dir":    ICB_DIR / "GSE140901",
     },
 }
 

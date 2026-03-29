@@ -57,8 +57,8 @@ echo "[INFO] Downloading GSE149614 ..."
 GSE149614_DIR="${RAW_DIR}/GSE149614"
 BASE="https://ftp.ncbi.nlm.nih.gov/geo/series/GSE149nnn/GSE149614/suppl"
 
-download "${BASE}/GSE149614_HCC.scRNAseq.S71271.count.txt.gz"    "${GSE149614_DIR}"
-download "${BASE}/GSE149614_HCC.scRNAseq.S71271.metadata.txt.gz" "${GSE149614_DIR}"
+download "${BASE}/GSE149614_HCC.scRNAseq.S71915.count.txt.gz"    "${GSE149614_DIR}"
+download "${BASE}/GSE149614_HCC.metadata.updated.txt.gz"         "${GSE149614_DIR}"
 
 # ---------------------------------------------------------------------------
 # GSE140228 — CD45-sorted TILs, Droplet + Smart-seq2 (10x Chromium)
@@ -68,10 +68,10 @@ echo "[INFO] Downloading GSE140228 (Droplet data only) ..."
 GSE140228_DIR="${RAW_DIR}/GSE140228"
 BASE="https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140228/suppl"
 
-download "${BASE}/GSE140228_Droplet_raw_data_matrix.mtx.gz"   "${GSE140228_DIR}"
-download "${BASE}/GSE140228_Droplet_raw_data_barcodes.tsv.gz" "${GSE140228_DIR}"
-download "${BASE}/GSE140228_Droplet_raw_data_genes.tsv.gz"    "${GSE140228_DIR}"
-download "${BASE}/GSE140228_Droplet_cell_info.txt.gz"         "${GSE140228_DIR}"
+download "${BASE}/GSE140228_UMI_counts_Droplet.mtx.gz"           "${GSE140228_DIR}"
+download "${BASE}/GSE140228_UMI_counts_Droplet_barcodes.tsv.gz" "${GSE140228_DIR}"
+download "${BASE}/GSE140228_UMI_counts_Droplet_genes.tsv.gz"    "${GSE140228_DIR}"
+download "${BASE}/GSE140228_UMI_counts_Droplet_cellinfo.tsv.gz" "${GSE140228_DIR}"
 
 # ---------------------------------------------------------------------------
 # GSE156625 — Pre-processed HCC h5ad object
@@ -94,7 +94,7 @@ BASE="https://ftp.ncbi.nlm.nih.gov/geo/series/GSE151nnn/GSE151530/suppl"
 download "${BASE}/GSE151530_matrix.mtx.gz"    "${GSE151530_DIR}"
 download "${BASE}/GSE151530_barcodes.tsv.gz"  "${GSE151530_DIR}"
 download "${BASE}/GSE151530_genes.tsv.gz"     "${GSE151530_DIR}"
-download "${BASE}/GSE151530_CellInfo.txt.gz"  "${GSE151530_DIR}"
+download "${BASE}/GSE151530_Info.txt.gz"      "${GSE151530_DIR}"
 
 # =============================================================================
 # VALIDATION / BULK DATASETS
@@ -105,17 +105,17 @@ download "${BASE}/GSE151530_CellInfo.txt.gz"  "${GSE151530_DIR}"
 # ---------------------------------------------------------------------------
 echo ""
 echo "[INFO] Downloading GSE285963 ..."
-GSE285963_DIR="${EXTERNAL_DIR}/GSE285963"
+GSE285963_DIR="${EXTERNAL_DIR}/ICB_cohorts/GSE285963"
 BASE="https://ftp.ncbi.nlm.nih.gov/geo/series/GSE285nnn/GSE285963/suppl"
 
-download "${BASE}/GSE285963_readcount.gct.gz" "${GSE285963_DIR}"
+download "${BASE}/GSE285963_CU24_n84_readcount.gct.gz" "${GSE285963_DIR}"
 
 # ---------------------------------------------------------------------------
 # GSE140901 — Immunotherapy cohort (RAW + processed)
 # ---------------------------------------------------------------------------
 echo ""
 echo "[INFO] Downloading GSE140901 ..."
-GSE140901_DIR="${EXTERNAL_DIR}/GSE140901"
+GSE140901_DIR="${EXTERNAL_DIR}/ICB_cohorts/GSE140901"
 BASE="https://ftp.ncbi.nlm.nih.gov/geo/series/GSE140nnn/GSE140901/suppl"
 
 download "${BASE}/GSE140901_RAW.tar"                   "${GSE140901_DIR}"
